@@ -200,7 +200,7 @@
       var j = Math.floor(Math.random() * (i + 1));
       var tmp = spawnQueue[i]; spawnQueue[i] = spawnQueue[j]; spawnQueue[j] = tmp;
     }
-    spawnTimer = 0.2;
+    spawnTimer = n === 1 ? 1.2 : 0.2; // wave 1 gives you a breath after the banner
     enemiesLeft = spawnQueue.length;
     showBanner('WAVE ' + n, n === E.MAX_WAVE ? 'Last wave — take the Booyah' : enemiesLeft + ' enemies incoming');
     Audio.sounds.waveStart();

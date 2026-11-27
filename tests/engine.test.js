@@ -20,8 +20,8 @@ test('weapons are sane: damage, fire rate and ammo defined for every gun', () =>
 
 test('wave composition grows and unlocks enemy types on schedule', () => {
   const w1 = E.waveComposition(1);
-  assert.deepEqual(w1, [{ type: 'rusher', count: 3 }]);
-  assert.equal(E.waveEnemyCount(1), 3);
+  assert.deepEqual(w1, [{ type: 'rusher', count: 2 }]);
+  assert.equal(E.waveEnemyCount(1), 2);
 
   const w3 = E.waveComposition(3);
   assert.ok(w3.some((e) => e.type === 'gunner'), 'gunners appear on wave 3');

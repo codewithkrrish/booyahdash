@@ -101,7 +101,7 @@
    * the gunners show up on wave 3 and brutes on wave 4. */
   function waveComposition(wave) {
     if (wave < 1) wave = 1;
-    var rushers = 2 + wave;
+    var rushers = 1 + wave;
     var gunners = wave >= 3 ? Math.floor((wave - 1) / 2) : 0;
     var brutes = wave >= 4 ? Math.floor((wave - 2) / 2) : 0;
     return [
